@@ -25,3 +25,16 @@ COPY ./requirements.txt /usr/workspace
 
 # Установка Python-зависимостей
 RUN pip3 install -r requirements.txt
+
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r /app/requirements.txt
+
+# Установка Allure
+RUN apt-get update && apt-get install -y unzip curl && \
+    curl -o allure.zip -sSL https://github.com/allure-framework/allure2/releases/download/2.22.5/allure-2.22.5.zip && \
+    unzip allure.zip -d /opt/ && \
+    ln -s /opt/allure-2.22.5/bin/allure /usr/bin/allure && \
+    rm allure.zip
+
+WORKDIR /usr/workspace
+COPY . /usr/workspace
