@@ -26,3 +26,6 @@ COPY ./requirements.txt /usr/workspace
 
 # Install Python dependencies
 RUN pip3 install -r requirements.txt
+
+
+RUN apk add --no-cache libstdc++
