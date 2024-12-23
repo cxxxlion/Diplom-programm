@@ -1,5 +1,26 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/lib/chromium/chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
+      "children" : [ {
+        "name" : "Change profile name",
+        "uid" : "e5359a5a7324042a",
+        "parentUid" : "dd609d417114094a9d1f6e41079e7b60",
+        "status" : "broken",
+        "time" : {
+          "start" : 1734991861368,
+          "stop" : 1734991861368,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "dd609d417114094a9d1f6e41079e7b60"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
   "name" : "categories"
 }
