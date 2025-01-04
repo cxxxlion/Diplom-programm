@@ -1,11 +1,11 @@
 [ {
-  "uid" : "81609d203c1deccc",
+  "uid" : "18e94122928704f6",
   "name" : "Change profile name",
   "time" : {
-    "start" : 1734999804869,
-    "stop" : 1734999823001,
-    "duration" : 18132
+    "start" : 1735996617901,
+    "stop" : 1735996640901,
+    "duration" : 23000
   },
-  "status" : "passed",
+  "status" : "broken",
   "severity" : "critical"
 } ]
