@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  regression:
+    
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    # Монтирование рабочей директории в контейнер
+      - .:/usr/workspace
+      # Монтирование папки allure-results для сохранения результатов
+      - ./allure-results:/usr/workspace/allure-results:rw
+
+    command: /bin/sh -c "chmod -R 777 /usr/workspace/allure-results && pytest -sv --alluredir=allure-results && allure generate allure-results --clean -o allure-report"
+    working_dir: /usr/workspace
+    environment:
+      - LOGIN=${LOGIN}
+      - PASSWORD=${PASSWORD}
